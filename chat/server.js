@@ -122,13 +122,16 @@ function quit(nick){
     broadcast(message);
     freeConn(client);
 }
-
+/**
+ * 信息处理
+ */
 function chat(msg){
+    // 如果是quit 或者 exit  则退出聊天室
     if(msg.msg.toLowerCase()=='quit'||msg.msg.toLowerCase()=='exit'){
         quit(msg.nick);
         return ;
     }
-    // @aa:你好阿！   私聊
+    //私聊      @aa:你好阿！
     let flag = msg.msg.substr(0,1);
 	if(flag == '@'){
         let t = msg.msg.split(':');
