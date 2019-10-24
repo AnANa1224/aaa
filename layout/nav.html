@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>布局</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="icon/iconfont.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="left">
+                <div class="none"></div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><i class="iconfont">&#xe64d;</i>nav1</li>
+                    <li><i class="iconfont">&#xe65e;</i>nav2</li>
+                    <li><i class="iconfont">&#xe640;</i>nva3</li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <div class="title">
+                <h3>Home / List / <span>App</span></h3>
+                <h4><span class="iconfont">&#xe64f;</span></h4>
+            </div>
+            <div class="cont">
+                Content
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <h3>Design &copy;2019 Created by XXX</h3>
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $('h4 span').on('click',function(){
+            console.log($('#header').css('width'))
+            if ($('#header').css('width') == '0px') {
+                $('#content').animate({
+                    width: '70%',
+                },1000)
+                $('#header').animate({
+                    width: '30%',
+                },1000);
+            }else{
+                $('#header').animate({
+                    width: '0%',
+                },1000);
+                $('#content').animate({
+                    width: '100%',
+                },1000)
+            }
+        });
+        $(window).on('resize',function(){
+            if($(window).width()) {
+                $('#header').removeAttr('style');
+                $('#content').removeAttr('style');
+            }
+        });
+        $('li').on('mouseover',function(){
+            $('li').removeAttr('class')
+            $(this).attr('class','color');
+        })
+    </script>
+</body>
+</html>

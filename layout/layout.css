@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+li{
+    /* width: calc(1/12*100%); */
+    flex: 1;
+    list-style: none;
+    padding: 30px 0 15px;
+    background: #0aa5e4;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+li:hover{
+    background: #badfef;
+    opacity: 1;
+}
