@@ -1,0 +1,277 @@
+body{
+    background: #eee;
+}
+a{
+    text-decoration: none;
+}
+body,ul,li{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+    float: left;
+}
+#main{
+    width: 1000px;
+    margin: 100px auto 0;
+    padding-top: 1px;
+}
+#banner{
+    width: 1000px;
+    height: 340px;
+    margin-bottom: 20px;
+}
+#btn{
+    position: relative;
+    left: 20px;
+    bottom: 60px;
+}
+#btn ul li{
+    list-style: none;
+    width: 30px;
+    height: 5px;
+    margin-right: 5px;
+    background: #eee;
+    float: left;
+    overflow: hidden;
+
+}
+#btn ul li:hover{
+    cursor: pointer;
+}
+#content{
+    width: 1000px;
+    margin: 0 auto;
+}
+#content::before{
+    clear: both;
+    content: '';
+    display: table;
+}
+#content::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+#content .left{
+    width: 730px;
+    float: left;
+    background: #fff;
+}
+#content .cont{
+    margin: 20px 0;
+    padding: 0 20px;
+    width: 200px;
+    text-align: center;
+    border-right: 1px solid #f3f3f3;
+    float: left;
+}
+#content .cont h3{
+    font-weight: 500;
+}
+#content .cont p{
+    color: #aaa;
+}
+#content .cont img{
+    margin-top: 10px;
+}
+#content .cont:last-of-type{
+    border-right: none;
+}
+#content .right{
+    width: 250px;
+    float: right;
+    background: #fff;
+    text-align: center;
+
+}
+#content .right .top{
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+#content .right .top img{
+    border-radius: 50%;
+}
+#content .right .top h4{
+    font-weight: 500;
+    margin-top: 10px;
+}
+#content .right .top p{
+    /* margin-bottom: 10px; */
+}
+#content .right .top a{
+    display: inline-block;
+    width: 95px;
+    height: 35px;
+    border: 1px solid #FC8F58;
+    line-height: 35px;
+    font-size: 14px;
+}
+#content .right .top a:first-of-type{
+    background: #FC6A21;
+    color: #e3e3e3;
+}
+#content .right .top a:last-of-type{
+    background: #fff;
+    color: #FC7E40;
+}
+#content .right .bottom{
+    height: 63px;
+}
+#content .right .bottom a{
+    line-height: 63px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #FC854B;
+}
+#content .right .bottom span{
+    color: #ccc;
+}
+
+/* 登录成功后的样式 */
+#content .login-right{
+    display: none;
+    width: 250px;
+    float: right;
+    background: #fff;
+    text-align: center;
+
+}
+#content .login-right .top{
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+#content .login-right .top img{
+    border-radius: 50%;
+}
+#content .login-right .top h4{
+    font-weight: 500;
+    margin-top: 10px;
+}
+#content .login-right .top p{
+    /* margin-bottom: 10px; */
+}
+#content .login-right .top a{
+    display: inline-block;
+    width: 95px;
+    height: 35px;
+    border: 1px solid #FC8F58;
+    line-height: 35px;
+    font-size: 14px;
+}
+#content .login-right .top a:last-of-type{
+    background: #fff;
+    color: #FC7E40;
+}
+#content .login-right .login-top{
+    margin-top: 20px;
+    padding: 0;
+}
+#content .login-right .login-top h4{
+    margin: 8px 0;
+}
+#content .login-right .login-top p span{
+    padding-right: 50px;
+    display: block;
+    margin-top: 10px;
+    color: #FC854B;
+    text-align: right;
+}
+#content .login-right .bottom{
+    height: 63px;
+}
+#content .login-right .bottom ul::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+#content .login-right .bottom ul{
+    padding-top: 6px;
+    padding-left: 5px;
+}
+#content .login-right .bottom ul li{
+    width: 80px;
+}
+#content .login-right .bottom ul li span{
+    color: #FC854B;
+    font-weight: bold;
+}
+#content .login-right .bottom ul li p{
+    color: #aaa;
+    line-height: 0;
+    font-size: 13px;
+}
+
+/* login */
+#login{
+    display: none;
+    width: 500px;
+    height: 450px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #eee;
+    left: 35%;
+    top: 30px;
+    position: absolute;
+    margin: 200px auto;
+}
+#login .close{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    float: right;
+}
+#login .close:hover{
+    cursor: pointer;
+}
+#login input{
+    height: 30px;
+    padding: 10px;
+    width: 350px;
+    margin-bottom: 20px;
+}
+#login input:first-of-type{
+    margin-top: 20px;
+}
+#login #button{
+    width: 374px;
+    height: 50px;
+    color: #FFF;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid #FB6920;
+    background: #FB6920;
+}
+#login p{
+    float: right;
+}
+#login p a{
+    font-size: 13px;
+    color: #9B9EA0;
+}
+#login .notice{
+    display: none;
+    width: 372px;
+    height: 30px;
+    margin-right: 63px;
+    line-height: 30px;
+    border: 1px solid #d46303;
+    background: #fffaf1;
+    color: #333;
+}
+#login .notice span{
+    display: inline-block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 5px 10px 0 15px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 100%;
+    color: #FFF;
+    background: #fb6920;
+}
