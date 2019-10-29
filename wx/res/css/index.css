@@ -1,0 +1,91 @@
+#header{
+    height: 8vh;
+    background: #ededed;
+    line-height: 8vh;
+}
+
+#header .identity{
+    width: 15%;
+    height: 100%;
+    margin-left: 2%;
+}
+#header .sAdd a{
+    padding: 0 10px;
+}
+#header .sAdd a i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    color: #000;
+}
+
+#main{
+    height: 84vh;
+    background: #fff;
+    overflow: scroll;
+}
+#main .list li{
+    height: 8vh;
+    margin-bottom: 1px;
+}
+#main .list li .avatar{
+    text-align: center;
+    width: 20%;
+    height: 100%;
+}
+#main .list li .avatar img{
+    border-radius: 8px;
+    height: 80%;
+    margin-top: 8%;
+}
+#main .list li .cont{
+    width: 78%;
+    height: 100%;
+    border-bottom: 1px solid #e4e4e2;
+}
+#main .list li .cont .time{
+    margin-top: 4%;
+}
+#main .list li .cont .time p:first-of-type{
+    width: 80%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    letter-spacing:2px;
+}
+#main .list li .cont .time p:last-of-type{
+    color: #ababab;
+    margin-right: 5%;
+    letter-spacing:2px;
+}
+#main .list li .cont .message{
+    color: #aaa;
+    margin-top: 2%;
+}
+#main .list li .cont .message p{
+    width: 90%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    letter-spacing:2px;
+}
+#footer{
+    height: 8vh;
+    background: #f7f7f9;
+}
+#footer .menu{
+    height: 100%;
+}
+#footer .menu li{
+    padding-top: 3%;
+    float: left;
+    text-align: center;
+    width: calc(1/4*100%);
+}
+#footer .menu li p:first-of-type{
+    font-size: 22px;
+}
+#footer .menu .active p{
+    color: #07C062;
+}

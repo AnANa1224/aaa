@@ -1,0 +1,93 @@
+body,ul{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+p{margin: 0; font-size: 12px;}
+.fl{float: left;}
+.fr{float: right;}
+.cf::after{clear: both; content: ''; display: table; }
+.tac{text-align: center;}
+
+
+#header{
+    height: 8vh;
+    background: #ededed;
+    line-height: 8vh;
+}
+
+#header .identity{
+    margin-left: 2%;
+    width: 15%;
+    height: 100%;
+}
+#header .sAdd a{
+    padding: 0 10px;
+}
+#header .sAdd a i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    color: #000;
+}
+
+#main{
+    height: 84vh;
+    background: #ededed;
+    overflow: scroll;
+}
+#main .list li{
+    margin-bottom: 1vh;
+    background: #fff;
+}
+#main .list li::after{clear: both; content: ''; display: table; }
+#main .list li .avatar{
+    text-align: center;
+    width: 20%;
+    height: 8vh;
+    line-height: 13vh;
+}
+#main .list li .avatar img{
+    border-radius: 8px;
+    height: 6.4vh;
+    /* margin-top: 8%; */
+}
+#main .list li .cont{
+    width: 80%;
+    height: 8vh;
+}
+#main .list .bb{
+    border-bottom: 1px solid #ededed;
+}
+#main .list li .cont p{
+    height: 100%;
+    line-height: 8vh;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    letter-spacing:2px;
+}
+#main .list li .cont p span:last-of-type{
+    height: 8vh;
+    line-height: 8vh;
+    color: #ababab;
+    margin-right: 2%;
+}
+#footer{
+    height: 8vh;
+    background: #f7f7f9;
+}
+#footer .menu{
+    height: 100%;
+}
+#footer .menu li{
+    padding-top: 3%;
+    float: left;
+    text-align: center;
+    width: calc(1/4*100%);
+}
+#footer .menu li p:first-of-type{
+    font-size: 22px;
+}
+#footer .menu .active p{
+    color: #07C062;
+}

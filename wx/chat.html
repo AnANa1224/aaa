@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>聊天</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./res/css/chat.css">
+</head>
+<body>
+    <div id="header">
+        <div class="identity fl tac">
+            <span class="fa fa-chevron-left"></span>
+            <span>胡汉三</span>
+        </div>
+        <div class="sAdd fr tac">
+            <a href="">
+                <i class="fa fa-ellipsis-h"></i>
+            </a>
+        </div>
+    </div>
+    <div id="main">
+        <ul class="list">
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/1.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>俺胡汉三回来了啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+                </div>
+            </li>
+           <li>
+                <div class="avatar fr">
+                    <img src="./res/img/4.jpg" alt="">
+                </div>
+                <div class="cont fr">
+                    <p>你胡汉三怕不是弱智</p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/1.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p><img src="./res/img/bqb.jpg" alt=""></p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fr">
+                    <img src="./res/img/4.jpg" alt="">
+                </div>
+                <div class="cont fr">
+                    <p>我的天,好帅</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="footer">
+        <div class="voice fl">
+            <span class="fa fa-wifi fa-rotate-90"></span>
+        </div>
+        <div class="text fl">
+            <input type="text">
+        </div>
+        <div class="look fr">
+            <span class="fa fa-smile-o"></span>
+            <span class="fa fa-plus-circle"></span>
+        </div>
+    </div>
+    <script src="../jquery.js"></script>
+    <script>
+        $('#footer .list').click(function(){
+            $(location).attr('href', './list.html');
+        })
+        $('.find').click(function(){
+            $(location).attr('href', './find.html');
+        })
+        $('.me').click(function(){
+            $(location).attr('href', './infor.html');
+        })
+        $('.identity span:first-child').click(function(){
+            $(location).attr('href', './index.html');
+        })
+    </script>
+</body>
+</html>

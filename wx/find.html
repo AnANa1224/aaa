@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>发现</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./res/css/find.css">
+</head>
+<body>
+    <div id="header">
+        <div class="identity fl tac">发现</div>
+        <div class="sAdd fr tac">
+            <a href="">
+                <i class="fa fa-search"></i>
+            </a>
+            <a href="">
+                <i class="fa fa-plus-circle"></i>
+            </a>
+        </div>
+    </div>
+    <div id="main">
+        <ul class="list">
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/pyq.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p><span class="fl">朋友圈</span><span class="fr fa fa-chevron-right"></span></p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/sys.jpg" alt="">
+                </div>
+                <div class="cont bb fl">
+                    <p><span class="fl">扫一扫</span><span class="fr fa fa-chevron-right"></span></p>
+                </div>
+                <div class="avatar fl">
+                    <img src="./res/img/yyy.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p><span class="fl">摇一摇</span><span class="fr fa fa-chevron-right"></span></p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/kyk.jpg" alt="">
+                </div>
+                <div class="cont bb fl">
+                    <p><span class="fl">看一看</span><span class="fr fa fa-chevron-right"></span></p>
+                </div>
+                <div class="avatar fl">
+                    <img src="./res/img/souys.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p><span class="fl">搜一搜</span><span class="fr fa fa-chevron-right"></span></p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/fjdr.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p><span class="fl">附近的人</span><span class="fr fa fa-chevron-right"></span></p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/gw.jpg" alt="">
+                </div>
+                <div class="cont bb fl">
+                    <p><span class="fl">购物</span><span class="fr fa fa-chevron-right"></span></p>
+                </div>
+                <div class="avatar fl">
+                    <img src="./res/img/yx.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p><span class="fl">游戏</span><span class="fr fa fa-chevron-right"></span></p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/xcx.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p><span class="fl">小程序</span><span class="fr fa fa-chevron-right"></span></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="footer">
+        <ul class="menu cf">
+            <li>
+                <p class="fa fa-weixin"></p>
+                <p class="wx">微信</p>
+            </li>
+            <li>
+                <p class="fa fa-address-card-o"></p>
+                <p class="list">通讯录</p>
+            </li>
+            <li class="active">
+                <p class="fa fa-safari"></p>
+                <p class="find">发现</p>
+            </li>
+            <li>
+                <p class="fa fa-user-o"></p>
+                <p class="me">我</p>
+            </li>
+        </ul>
+    </div>
+    <script src="../jquery.js"></script>
+    <script>
+        $('.wx').click(function(){
+            $(location).attr('href', './index.html');
+        })
+        $('#footer .list').click(function(){
+            $(location).attr('href', './list.html');
+        })
+        $('.me').click(function(){
+            $(location).attr('href', './infor.html');
+        })
+    </script>
+</body>
+</html>

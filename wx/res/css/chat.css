@@ -1,0 +1,108 @@
+body,ul{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+p{margin: 0; font-size: 12px;}
+.fl{float: left;}
+.fr{float: right;}
+.cf::after{clear: both; content: ''; display: table; }
+.tac{text-align: center;}
+
+
+#header{
+    height: 8vh;
+    background: #ededed;
+    line-height: 8vh;
+    border-bottom: .5px solid #333;
+}
+
+#header .identity{
+    width: 25%;
+    height: 100%;
+    margin-left: 2%;
+}
+#header .identity span{
+    margin-right: 8%;
+}
+#header .sAdd a{
+    padding: 0 10px;
+}
+#header .sAdd a i{
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    color: #000;
+}
+
+#main{
+    height: 84vh;
+    background: #ededed;
+    overflow: scroll;
+}
+#main .list li{
+    margin-bottom: 3%;
+}
+#main .list li::after{
+    clear: both;
+    content: '';
+    display: table;
+}
+#main .list li .avatar{
+    text-align: center;
+    width: 20%;
+    height: 100%;
+}
+#main .list li .avatar img{
+    border-radius: 8px;
+    height: 6vh;
+    margin-top: 8%;
+}
+#main .list li .cont{
+    width: 60%;
+    min-height: 7vh;
+    background: #fff;
+    margin-top: 2%;
+}
+#main .list li .cont p{
+    padding: 2% 2% 0 2%;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+#main .list li .cont p img{
+    width: 100%;
+}
+#footer{
+    height: 8vh;
+    background: #f7f7f9;
+}
+#footer .voice{
+    text-align: center;
+    height: 8vh;
+    width: 15%;
+}
+#footer .text{
+    width: 65%;
+    line-height: 8vh;
+}
+#footer .look{
+    width: 20%;
+    height: 8vh;
+}
+#footer .voice span{
+    width: 22px;
+    line-height: 8vh;
+    font-size: 22px;
+}
+#footer .text input{
+    width: 95%;
+    font-size: 18px;
+    height: 5vh;
+    padding-left: 3%;
+    border: none;
+    outline: none;
+}
+#footer .look span{
+    margin-left: 5%;
+    width: 30px;
+    line-height: 8vh;
+    font-size: 30px;
+}

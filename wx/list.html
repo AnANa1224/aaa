@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>列表</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./res/css/list.css">
+</head>
+<body>
+    <div id="header">
+        <div class="identity fl tac">通讯录</div>
+        <div class="sAdd fr tac">
+            <a href="">
+                <i class="fa fa-search"></i>
+            </a>
+            <a href="">
+                <i class="fa fa-plus-circle"></i>
+            </a>
+        </div>
+    </div>
+    <div id="main">
+        <ul class="list">
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/xpy.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p><span class="fl">新的朋友</span></p>
+                </div>
+                <div class="avatar fl">
+                    <img src="./res/img/ql.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p><span class="fl">群聊</span></p>
+                </div>
+                <div class="avatar fl">
+                    <img src="./res/img/bqian.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p><span class="fl">标签</span></p>
+                </div>
+                <div class="avatar fl">
+                    <img src="./res/img/gzh.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p><span class="fl">公众号</span></p>
+                </div>
+            </li>
+            <li class="bz">A</li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/1.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>安安</p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/1.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>安安</p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/1.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>安安</p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/1.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>安安</p>
+                </div>
+            </li>
+            <li class="bz">B</li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/2.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>爸爸</p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/2.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>爸爸</p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/2.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>爸爸</p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/2.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>爸爸</p>
+                </div>
+            </li>
+            <li class="bz">C</li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/3.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>小三</p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/3.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>小三</p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/3.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>小三</p>
+                </div>
+            </li>
+            <li>
+                <div class="avatar fl">
+                    <img src="./res/img/3.jpg" alt="">
+                </div>
+                <div class="cont fl">
+                    <p>小三</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="footer">
+        <ul class="menu cf">
+            <li>
+                <p class="fa fa-weixin"></p>
+                <p class="wx">微信</p>
+            </li>
+            <li class="active">
+                <p class="fa fa-address-card-o"></p>
+                <p class="list">通讯录</p>
+            </li>
+            <li>
+                <p class="fa fa-safari"></p>
+                <p class="find">发现</p>
+            </li>
+            <li>
+                <p class="fa fa-user-o"></p>
+                <p class="me">我</p>
+            </li>
+        </ul>
+    </div>
+    <script src="../jquery.js"></script>
+    <script>
+        $('.wx').click(function(){
+            $(location).attr('href', './index.html');
+        })
+        $('.find').click(function(){
+            $(location).attr('href', './find.html');
+        })
+        $('.me').click(function(){
+            $(location).attr('href', './infor.html');
+        })
+    </script>
+</body>
+</html>
