@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+    <style>
+        table{margin: 100px auto;}
+        th{background: #ccc;width: 100px;}
+        td{text-align: center;background: #eee;}
+        span{cursor: pointer;}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <table cellpadding="0" cellspacing="0"  id="table">
+            <tr>
+                <th>id</th>
+                <th>用户名</th>
+                <th>性别</th>
+                <th>操作</th>
+            </tr>
+            <tr v-for="user in users">
+                <td>{{user.id}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.sex==0?"男":"女"}}</td>
+                <td>
+                    <span @click="exit(user.id)">编辑</span>
+                    <span @click="del(user.id)">删除</span>
+                </td>
+            </tr>
+        </table>
+        <div class="add">
+            <table>
+                <caption>新增用户</caption>
+                <tr>
+                    <td>用户名:</td>
+                    <td><input type="text" v-model="create.username"></td>
+                </tr>
+                <tr>
+                    <td>姓　别:</td>
+                    <td><input type="text" v-model="create.sex"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button v-on:click="add">添加</button></td>
+                </tr>
+            </table>
+            <table>
+                <caption>修改用户</caption>
+                <tr>
+                    <td>用户名:</td>
+                    <td><input type="text" v-model="exitmess.username"></td>
+                </tr>
+                <tr>
+                    <td>姓　别:</td>
+                    <td><input type="text" v-model="exitmess.sex"></td>
+                </tr>
+                <tr>
+                    <td><input type="hidden" v-model="exitmess.id"></td>
+                    <td><button @click="doExit">修改</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="../jquery.js"></script>
+    <script src="../vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                users: [
+                    // {id:0,username:"老王",sex:0},
+                    // {id:1,username:"小王",sex:1},
+                    // {id:2,username:"小小王",sex:0},
+                ],
+                create: {
+                    username: "",
+                    sex: ""
+                },
+                exitmess: {
+                    id: "",
+                    username: "",
+                    sex: ""
+                }
+            },
+            mounted(){
+                this.init()
+            },
+            methods:{
+                init(){
+                    $.ajax({
+                        url: "http://127.0.0.1:8888/mock.php/user",
+                        dataType: "json",
+                        success: (res)=>{
+                            this.users = res;
+                        }
+                    })
+                },
+                ajax(url,success,err,data="",type="get"){
+                    $.ajax({
+                        url: url,
+                        type: type,
+                        data: data,
+                        dataType: "json",
+                        success: (res)=>{
+                            this.init();
+                            alert(success);
+                        },
+                        error: (res)=>{
+                            alert(err);
+                        }
+                    })
+                },
+                add(){
+                    if(this.create.username.length==0){
+                        alert("请输入用户名")
+                        return false;
+                    }
+                    if(this.create.sex!=0&&this.create.sex!=1){
+                        alert("请输入性别0或1")
+                        return false;
+                    }
+                    this.ajax("http://127.0.0.1:8888/mock.php/user/create","新增成功","新增失败",this.create,"post");
+                    // $.ajax({
+                    //     url: "http://127.0.0.1:8888/mock.php/user/create",
+                    //     type: "post",
+                    //     data: this.create,
+                    //     dataType: "json",
+                    //     success: (res)=>{
+                    //         this.init();
+                    //         alert("新增成功");
+                    //     },
+                    //     error: (res)=>{
+                    //         alert("新增成功");
+                    //     }
+                    // })
+                },
+                exit(id){
+                    $.ajax({
+                        url: "http://127.0.0.1:8888/mock.php/user/get?id="+id,
+                        dataType: "json",
+                        success: (res)=>{
+                            this.exitmess = res;
+                            
+                        }
+                    })
+                },
+                doExit(){
+                    if (this.exitmess.id=="") {
+                        alert("请选择要修改的用户")
+                        return
+                    }
+                    if(this.exitmess.username.length==0){
+                        alert("请输入用户名")
+                        return
+                    }
+                    if(this.exitmess.sex!=0&&this.exitmess.sex!=1){
+                        alert("请输入性别0或1")
+                        return
+                    }
+                    this.ajax("http://127.0.0.1:8888/mock.php/user/update?id="+this.exitmess.id,"修改成功","修改失败",this.exitmess,"post");
+                    // $.ajax({
+                    //     url: "http://127.0.0.1:8888/mock.php/user/update?id="+this.exitmess.id,
+                    //     type: "post",
+                    //     data: this.exitmess,
+                    //     dataType: "json",
+                    //     success: (res)=>{
+                    //         this.init();
+                    //         alert("修改成功");
+                    //     },
+                    //     error: (res)=>{
+                    //         alert("修改失败");
+                    //     }
+                    // })
+                },
+                del(id){
+                    if (confirm('您确定要删除吗?')) {
+                        this.ajax("http://127.0.0.1:8888/mock.php/user/delete?id="+id,"删除成功","删除失败","post");
+                        // $.ajax({
+                        //     url: "http://127.0.0.1:8888/mock.php/user/delete?id="+id,
+                        //     type: "post",
+                        //     dataType: "json",
+                        //     success: (res)=>{
+                        //         alert("删除成功");
+                        //         this.init()
+                        //     },
+                        //     error: (res)=>{
+                        //         alert("删除失败");
+                        //     }
+                        // })
+                    }
+                }
+            },
+
+        })
+    </script>
+</body>
+</html>
